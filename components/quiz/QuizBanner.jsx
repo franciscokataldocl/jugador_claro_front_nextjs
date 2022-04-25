@@ -53,47 +53,6 @@ const QuizBanner = () => {
 }
 
 
-  // const handleQuizOpen = async () => {
-
-  //   //enviamos la modificacion de que el usuario ya esta jugando el quiz
-  //   //(ya presiono el boton participar)
-  // const sendUserPlayed = async () => {
-  //   const requestOptions = {
-  //     method: "POST",
-  //     headers: { "Content-Type": "application/json" },
-  //     body: JSON.stringify(quiz),
-  //   };
-
-  //   const response = await fetch(
-  //     `${process.env.NEXT_PUBLIC_API_URL}user/played`,
-  //     requestOptions
-  //   );
-  //   const data = await response.json();
-
-
-  //   //datos del usuario al presionar el botón PARTICIPAR
-  //   closeModal();
-
-
-
-
-
-
-
-
-  // };
-  // sendUserPlayed();
-
-  //   const getQuestions = async () => {
-  //  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}questions`);
-  //   const data = await response.json();
-
-  //     setQuestions(data);
-
-  //   }
-  //   getQuestions();
-  // }
-
     return (
       <>
         {show.quizModal && !show.showQuiz && (
@@ -194,45 +153,57 @@ const QuizBanner = () => {
 `
 
   const Content = styled.div`
-display:flex;
-justify-content: center;
-align-items: center;
-`;
-
-
-  const Col = styled.div`
-  width: 50%;
-  height: 100vh;
-  background: var(--red);
-  position: relative;
-  overflow: hidden;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  &:nth-child(2) {
-    background: var(--red);
     display: flex;
     justify-content: center;
     align-items: center;
+    @media (max-width: 768px) {
+      flex-direction:column;
+    }
+  `;
 
-  }
-`;
+
+  const Col = styled.div`
+    width: 50%;
+    height: 100vh;
+    background: var(--red);
+    position: relative;
+    overflow: hidden;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: 768px) {
+      height: 50vh;
+      width: 100%;
+    }
+    &:nth-child(1) {
+      @media (max-width: 768px) {
+        height: 20vh;
+      }
+    }
+    &:nth-child(2) {
+      background: var(--red);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  `;
 
   const ImageBoxClose = styled.div`
-width:30px;
-top:3%;
-right:3%;
-position:absolute;
-&:hover{
-  cursor:pointer;
-}
-`
+    width: 30px;
+    top: 3%;
+    right: 3%;
+    position: absolute;
+
+    &:hover {
+      cursor: pointer;
+    }
+  `;
 
   const LogoBox = styled.div`
 width:50%;

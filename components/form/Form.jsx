@@ -4,6 +4,8 @@ import Swal from "sweetalert2";
 import "animate.css";
 import { useUser } from "../../context/userContext";
 import { useShowHide } from "../../context/ShowHideContext";
+import { validate, clean, format, getCheckDigit } from "rut.js";
+
 
 
 
@@ -53,6 +55,9 @@ const Form = ({ regiones }) => {
         //validacion rut
         if (!valores.rut) {
           errores.rut = "Debes ingresar un RUT";
+        }
+        if (!validate(valores.rut)) {
+          errores.rut = "Debes ingresar un RUT válido";
         }
 
         //validacion telefono

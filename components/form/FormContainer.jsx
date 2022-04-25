@@ -93,9 +93,9 @@ export default FormContainer;
 const Container = styled.div`
   width: 100%;
   height: 100%;
-  padding: 5%;
+  padding: 1%;
   max-width:1200px;
-  margin:5% auto;
+  margin:2% auto;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -30,7 +30,7 @@ const BannerClaroVideo = () => {
                     width="100%"
                     height="100%"
                     layout="responsive"
-                    objectFit="contain"
+                    objectFit="cover"
                     alt="el-jugador-claro"
                     quality={100} />
             </ImageBox>
@@ -42,39 +42,53 @@ const BannerClaroVideo = () => {
 export default BannerClaroVideo;
 
 const Container = styled.div`
-background:var(--red);
-display:flex;
-justify-content:center;
-align-items:center;
-height:500px;
-overflow:hidden;
-
-
-
-`
+  background: var(--red);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  overflow: hidden;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: 100%;
+  }
+`;
 
 const ImageBox = styled.div`
-position:relative;
-width:70%;
-overflow:hidden;
-
-`
+  position: relative;
+  width: 70%;
+  overflow: hidden;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+`;
 
 const Col = styled.div`
-width:50%;
-background:var(--red);
-display:flex;
-justify-content:center;
-align-items:center;
-& ${ImageBox}{
-        width:50%;
+  width: 50%;
+  background: var(--red);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:nth-child(1) {
+    @media (max-width: 768px) {
+        height:300px;
 
     }
-&:nth-child(2){
-    & ${ImageBox}{
-        width:100%;
-        overflow:hidden;
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+  & ${ImageBox} {
+    width: 50%;
+    @media (max-width: 768px) {
+      width: 70%;
+    }
+  }
+  &:nth-child(2) {
+    & ${ImageBox} {
+      width: 100%;
+      overflow: hidden;
 
     }
-}
-`
+  }
+`;

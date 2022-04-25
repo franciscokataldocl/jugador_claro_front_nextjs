@@ -15,20 +15,27 @@ const QuizSection = () => {
 
   //estados de la trivia
   const [preguntaActual, setPreguntaActual] = useState(0);
-  const [puntuacion, setPuntuacion] = useState(1);
+  const [puntuacion, setPuntuacion] = useState(0);
   const [isFinished, setIsFinished] = useState(false);
 
   const handleAnswerSubmit = (isCorrect, e) => {
     //añadir estilos
     e.target.classList.add(isCorrect ? "correct" : "incorrect");
+    console.log('pregunta actual')
+    console.log(preguntaActual);
+    console.log("puntuacion");
+    console.log(puntuacion);
+    console.log("isFinished");
+    console.log(isFinished);
+
+
+
+
 
     //añadir puntuacion
     if (isCorrect) {
       setPuntuacion(puntuacion + 1);
-      console.log(`PUNTUACION: ${puntuacion}`);
-      console.log(`TOTAL PREGUNTAS: ${quiz.length}`);
       //cambiar siguiente pregunta
-
       setTimeout(() => {
         //si es la ultima pregunta
         if (preguntaActual === quiz.length - 1) {
@@ -48,12 +55,9 @@ const QuizSection = () => {
         if (preguntaActual === quiz.length - 1) {
           setIsFinished(true);
         }
-        setPuntuacion(puntuacion);
-        console.log(`PUNTUACION 2: ${puntuacion}`);
-        console.log(`TOTAL PREGUNTAS 2: ${quiz.length}`);
-  setPreguntaActual(preguntaActual + 1);
-  const buttons = document.getElementsByClassName("btn");
-  const buttonsArr = Array.from(buttons);
+        setPreguntaActual(preguntaActual + 1);
+        const buttons = document.getElementsByClassName("btn");
+        const buttonsArr = Array.from(buttons);
 
   buttonsArr.map((button) => {
     button.classList.remove("correct", "incorrect");
