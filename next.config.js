@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: [process.env.NEXT_PUBLIC_IMAGES],
+    domains: [process.env.NEXT_PUBLIC_BASE_URL],
   },
   env: {
     apiurl: process.env.API_URL,
