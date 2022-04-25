@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 const Hero = () => {
-  const background = "/img/hero_bg.jpg";
+  const background = `${process.env.NEXT_PUBLIC_BASE_URL}img/hero_bg.jpg`;
 
   return (
     <Container style={{ backgroundImage: `url("${background}")` }}>

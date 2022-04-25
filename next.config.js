@@ -2,10 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ["https://backendjugadorclaro.herokuapp.com/"],
-  },
-  env: {
-    apiurl: process.env.API_URL,
+    domains: ['localhost'],
   },
 };
 
