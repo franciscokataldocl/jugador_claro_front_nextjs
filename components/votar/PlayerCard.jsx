@@ -25,7 +25,7 @@ const PlayerCard = ({ id, nombre, porcentaje, image }) => {
       <Card className="shadow-1 aniamte-2s">
         <ImageBox className="shadow-1 ">
           <Image
-            src={`https://backendjugadorclaro.herokuapp.com/img/jugadores/${image}`}
+            src={`${process.env.NEXT_PUBLIC_API_BASE_URL}/img/jugadores/${image}`}
             width="100%"
             height="100%"
             layout="responsive"
