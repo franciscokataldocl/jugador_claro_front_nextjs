@@ -62,7 +62,7 @@ const FormContainer = ({ regiones }) => {
                 />
               </ImageBoxPremioMobile>
               <h3>
-                Vota por "El Jugador Claro" durante el partido de {""}
+                Vota por El Jugador Claro durante el partido de {""}
                 <strong className="c-red">Chile</strong> vs{" "}
                 <strong className="c-red">Uruguay</strong> y participa por un
                 espectacular <strong className="c-red">Xiaomi 11T Pro</strong>

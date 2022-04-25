@@ -37,8 +37,7 @@ transition={{ delay:0, type: "spring", duration: 4 }}>
                         alt="el-jugador-claro-premio"
                         quality={100}/>
                     </ImageBoxPremioMobile>
-                    <h3
-                   >Vota por "El Jugador Claro" durante el partido de {''}
+                    <h3>Vota por El Jugador Claro durante el partido de {''}
                         <strong className="c-red">Chile</strong> vs <strong className="c-red">Uruguay</strong> y participa por un
                         espectacular <strong className="c-red">Xiaomi 11T Pro</strong></h3>
             <Form regiones={regiones}/>
